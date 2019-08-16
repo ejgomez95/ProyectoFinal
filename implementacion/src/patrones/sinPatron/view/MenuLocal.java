@@ -4,19 +4,19 @@ import patrones.sinPatron.model.Articulo;
 
 public class MenuLocal {
 
-    public void buscarArticuloPorNombre(){
+    public Articulo buscarArticuloPorNombre(){
         //TODO: Implementar
-        //TODO: Cambiar tipo de retorno a Articulo
+        return null;
     }
 
-    public void buscarArticuloPorDescripcion(){
+    public Articulo buscarArticuloPorDescripcion(){
         //TODO: Implementar
-        //TODO: Cambiar tipo de retorno a Articulo
+        return null;
     }
 
-    public void buscarArticuloPorCategoria(){
+    public Articulo buscarArticuloPorCategoria(){
         //TODO: Implementar
-        //TODO: Cambiar tipo de retorno a Articulo
+        return null;
     }
 
     public void consultarArticulos(){

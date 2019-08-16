@@ -10,4 +10,7 @@ public class Cola {
     public Queue<Repartidor> getColaRep() {
         return colaRep;
     }
+
+    //Relación de composición con Repartidor
+    //Asociado con ColaRep
 }

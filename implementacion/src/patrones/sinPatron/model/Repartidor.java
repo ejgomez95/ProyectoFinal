@@ -1,5 +1,7 @@
 package patrones.sinPatron.model;
 
+import patrones.structural.model.JefeBodega;
+
 public class Repartidor {
     private String nombre;
     private String id;
@@ -11,11 +13,10 @@ public class Repartidor {
         this.id = id;
     }
 
-//    public boolean devolverDocs(JefeBodega b){
-//        return false;
-    //TODO: Llamar a JefeBodega en implementación
+ public boolean devolverDocs(JefeBodega b){
+        return false;
     //TODO: Implementar
-//    }
+    }
 
     public void realizarEntrega(){
         //TODO: Implementar
