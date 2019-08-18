@@ -10,11 +10,20 @@ public class Sucursal implements Locales{
     @Override
     public List<Articulo> crearInventario() {
         System.out.println("Creando inventario para la matriz: ");
-        inventarioSucursal.add(new Articulo("iPod", "Dispositivo mobil", "Tecnologia", 100.0f));
-        inventarioSucursal.add(new Articulo("iPhone", "Dispositivo mobil", "Tecnologia", 500.0f));
-        inventarioSucursal.add(new Articulo("Celular Samsung", "Dispositivo mobil", "Tecnologia", 300.0f));
-        inventarioSucursal.add(new Articulo("Televisor Sony", "Para ver junto con toda la familia", "Entretenimiento", 1000.0f));
-        inventarioSucursal.add(new Articulo("Consola PS4", "Consola de videojugo", "Entretenimiento", 400.0f));
+        String sql = "select * from inventariosucursal";
+        try (
+                Connection c = BaseDatos.getConnection();
+                Statement stmnt = c.createStatement();
+                ResultSet rs = stmnt.executeQuery(sql);
+        ){
+            while (rs.next()) {
+                String nombre = rs.getString("Nombre");
+                String descripcion = rs.getString("descripcion");
+                String categoria = rs.getString("categoria");
+                String precio = rs.getString("precio");
+                inventarioSucursal.add(nombre, descripcion, categoria, Float.parseof(precio));
+            }
+        }
         return inventarioSucursal;
     }
 

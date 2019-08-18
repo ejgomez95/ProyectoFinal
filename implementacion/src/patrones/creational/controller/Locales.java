@@ -9,6 +9,8 @@ public interface Locales {
     Articulo venderLocal();
     Articulo venderDomicilio();
 
+
+
     //TODO: Esta interfaz se relaciona con MenuLocal y MenuEmpresa
     //TODO: Esta interfaz es implementada por Matriz, Sucursal y Bodega
 }

@@ -1,20 +1,33 @@
 package patrones.creational.controller;
 
 import patrones.sinPatron.model.Articulo;
+import patrones.creational.BaseDatos;
 
 import java.util.List;
 import java.util.Scanner;
+import java.sql.*;
 
 public class Bodega implements Locales {
     private List<Articulo> inventarioBodega;
+
+
     @Override
     public List<Articulo> crearInventario() {
         System.out.println("Creando inventario para la bodega: ");
-        inventarioBodega.add(new Articulo("iPod", "Dispositivo mobil", "Tecnologia", 100.0f));
-        inventarioBodega.add(new Articulo("iPhone", "Dispositivo mobil", "Tecnologia", 500.0f));
-        inventarioBodega.add(new Articulo("Celular Samsung", "Dispositivo mobil", "Tecnologia", 300.0f));
-        inventarioBodega.add(new Articulo("Televisor Sony", "Para ver junto con toda la familia", "Entretenimiento", 1000.0f));
-        inventarioBodega.add(new Articulo("Consola PS4", "Consola de videojugo", "Entretenimiento", 400.0f));
+        String sql = "select * from inventariobodega";
+        try (
+                Connection c = BaseDatos.getConnection();
+                Statement stmnt = c.createStatement();
+                ResultSet rs = stmnt.executeQuery(sql);
+        ){
+            while (rs.next()) {
+                String nombre = rs.getString("Nombre");
+                String descripcion = rs.getString("descripcion");
+                String categoria = rs.getString("categoria");
+                String precio = rs.getString("precio");
+                inventarioBodega.add(nombre, descripcion, categoria, Float.parseof(precio));
+            }
+        }
         return inventarioBodega;
     }
 
