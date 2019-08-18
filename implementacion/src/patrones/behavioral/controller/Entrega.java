@@ -11,6 +11,6 @@ public class Entrega {
     }
 
     public void hacerEntrega(){
-        //TODO: Implementar
+        System.out.println("Entrega de articulo: " + articulo.getNombre() + "se realizara: " + tipoEntrega);
     }
 }

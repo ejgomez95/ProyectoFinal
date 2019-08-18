@@ -14,11 +14,35 @@ public class Repartidor {
     }
 
  public boolean devolverDocs(JefeBodega b){
-        return false;
-    //TODO: Implementar
+        System.out.println("Entregado los documentos al jefe de bodega: " + b.getNombre());
+        return true;
     }
 
     public void realizarEntrega(){
-        //TODO: Implementar
+        System.out.println("Repartidor: " + nombre + " realizara una entrega");
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Ruta getRuta() {
+        return ruta;
+    }
+
+    public void setRuta(Ruta ruta) {
+        this.ruta = ruta;
     }
 }

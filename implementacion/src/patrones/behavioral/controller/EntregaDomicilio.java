@@ -10,6 +10,9 @@ public class EntregaDomicilio implements TipoEntrega{
 
     @Override
     public void entregar(Articulo articulo) {
-        //TODO: Implementar
+        articulo.getVenta().setVendido(true);
+        System.out.println("Repartidor: " + repartidor.getNombre() + " entrego el articulo usando la ruta: " 
+                + ruta.getEnvios() + "Articulo: " + articulo.getVenta() + " con el nombre" + articulo.getNombre() + 
+                " con el costo de: " + articulo.getPrecio());
     }
 }

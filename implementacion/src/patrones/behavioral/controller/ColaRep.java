@@ -3,15 +3,16 @@ package patrones.behavioral.controller;
 import patrones.sinPatron.model.Repartidor;
 
 public class ColaRep {
-    private Repartidor repartidor;
+    private int posicion;
+    private Cola colaRep;
 
     public Repartidor getNext() {
-        //TODO: Implementar
-        return null;
+        Repartidor r = colaRep.getCola().poll();
+        posicion++;
+        return r;
     }
 
     public boolean hasMore(){
-        //TODO: Implementar
-        return false;
+        return colaRep.getCola().size() < posicion;
     }
 }

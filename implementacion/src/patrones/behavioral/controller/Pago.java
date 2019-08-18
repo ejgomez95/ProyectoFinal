@@ -9,6 +9,6 @@ public class Pago {
     }
 
     public void hacerPago(){
-        //TODO: Implementar
+        System.out.println("Pago de: " + monto + " dolares se realizara en: " + tipoPago);
     }
 }
