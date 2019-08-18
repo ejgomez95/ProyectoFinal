@@ -329,11 +329,17 @@ insert Inventario values(0,3,3,40);
 insert Inventario values(0,3,4,40);
 insert Inventario values(0,3,5,40);
 
+create view Inventariobodega as
+SELECT Nombre, descripcion,categoria,Stock FROM Inventario
+join Producto where Inventario.idProducto = Producto.idProducto and idTecnoimport=1;
 
+create view InventarioMatriz as
+SELECT Nombre, descripcion,categoria,Stock FROM Inventario
+join Producto where Inventario.idProducto = Producto.idProducto and idTecnoimport=3;
 
-
-
-
+create view InventarioSucursal as
+SELECT Nombre, descripcion,categoria,Stock FROM Inventario
+join Producto where Inventario.idProducto = Producto.idProducto and idTecnoimport=2;
 
 
 
