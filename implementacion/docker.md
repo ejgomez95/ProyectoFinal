@@ -28,11 +28,14 @@ docker exec -it test-mysql-2 mysql -uroot -p
 
 
 
+
+
 ```
 
 
 ## Fuentes útiles
 * [How to deploy and use a MySQL Docker container](https://www.techrepublic.com/article/how-to-deploy-and-use-a-mysql-docker-container/)
-* [Handy MySQL Commands] (http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm)
+* [Handy MySQL Commands](http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm)
 * [Running Java Application with MySQL in Linked Docker Containers Environment](https://www.linkedin.com/pulse/running-java-application-mysql-linked-docker-deepak-sureshkumar)
 * [How to put your Java application into Docker container](https://medium.com/@wkrzywiec/how-to-put-your-java-application-into-docker-container-5e0a02acdd6b)
+* [Create a database in a Docker container for local development](https://developer.ibm.com/tutorials/docker-dev-db/)
