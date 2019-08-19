@@ -7,12 +7,12 @@ public class ColaRep {
     private Cola colaRep;
 
     public Repartidor getNext() {
-        Repartidor r = colaRep.getCola().poll();
+        Repartidor r = colaRep.getColaRep().poll();
         posicion++;
         return r;
     }
 
     public boolean hasMore(){
-        return colaRep.getCola().size() < posicion;
+        return colaRep.getColaRep().size() < posicion;
     }
 }
