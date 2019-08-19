@@ -2,8 +2,15 @@ package patrones.creational.controller;
 
 import patrones.sinPatron.model.Articulo;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import java.util.List;
-import java.util.Scanner
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Sucursal implements Locales{
     private List<Articulo> inventarioSucursal;
@@ -21,8 +28,10 @@ public class Sucursal implements Locales{
                 String descripcion = rs.getString("descripcion");
                 String categoria = rs.getString("categoria");
                 String precio = rs.getString("precio");
-                inventarioSucursal.add(nombre, descripcion, categoria, Float.parseof(precio));
+                inventarioSucursal.add(new sinPatron.Articulo(nombre, descripcion, categoria, Float.parseFloat(precio)));
             }
+        } catch (SQLException ex) {
+            Logger.getLogger(Sucursal.class.getName()).log(Level.SEVERE, null, ex);
         }
         return inventarioSucursal;
     }

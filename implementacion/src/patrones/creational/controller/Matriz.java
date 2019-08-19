@@ -4,6 +4,9 @@ import patrones.sinPatron.model.Articulo;
 
 import java.util.List;
 import java.util.Scanner;
+import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Matriz implements Locales {
     private List<Articulo> inventarioMatriz;
@@ -21,10 +24,12 @@ public class Matriz implements Locales {
                 String descripcion = rs.getString("descripcion");
                 String categoria = rs.getString("categoria");
                 String precio = rs.getString("precio");
-                inventarioSucursal.add(nombre, descripcion, categoria, Float.parseof(precio));
+                inventarioMatriz.add(new Articulo(nombre, descripcion, categoria, Float.parseFloat(precio)));
             }
+        } catch (SQLException ex) {
+            Logger.getLogger(Matriz.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return inventarioSucursal;
+        return inventarioMatriz;
     }
 
     @Override

@@ -5,7 +5,8 @@ import patrones.creational.BaseDatos;
 
 import java.util.List;
 import java.util.Scanner;
-import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Bodega implements Locales {
     private List<Articulo> inventarioBodega;
@@ -24,9 +25,12 @@ public class Bodega implements Locales {
                 String nombre = rs.getString("Nombre");
                 String descripcion = rs.getString("descripcion");
                 String categoria = rs.getString("categoria");
-                String precio = rs.getString("precio");
-                inventarioBodega.add(nombre, descripcion, categoria, Float.parseof(precio));
+                float precio = Float.parseFloat(rs.getString("precio"));
+
+                inventarioBodega.add(new Articulo(nombre, descripcion, categoria, precio));
             }
+        } catch (SQLException ex) {
+            Logger.getLogger(Bodega.class.getName()).log(Level.SEVERE, null, ex);
         }
         return inventarioBodega;
     }
@@ -63,3 +67,4 @@ public class Bodega implements Locales {
         return null;
     }
 }
+
