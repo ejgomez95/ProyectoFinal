@@ -1,7 +1,12 @@
 package patrones.creational.controller;
 
+import patrones.creational.BaseDatos;
 import patrones.sinPatron.model.Articulo;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,10 +26,12 @@ public class Matriz implements Locales {
                 String descripcion = rs.getString("descripcion");
                 String categoria = rs.getString("categoria");
                 String precio = rs.getString("precio");
-                inventarioSucursal.add(nombre, descripcion, categoria, Float.parseof(precio));
+                inventarioMatriz.add(new Articulo(nombre, descripcion, categoria, Float.valueOf(precio)));
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        return inventarioSucursal;
+        return inventarioMatriz;
     }
 
     @Override

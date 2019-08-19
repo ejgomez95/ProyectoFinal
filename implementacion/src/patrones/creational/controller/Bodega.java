@@ -25,8 +25,10 @@ public class Bodega implements Locales {
                 String descripcion = rs.getString("descripcion");
                 String categoria = rs.getString("categoria");
                 String precio = rs.getString("precio");
-                inventarioBodega.add(nombre, descripcion, categoria, Float.parseof(precio));
+                inventarioBodega.add(new Articulo(nombre, descripcion, categoria, Float.valueOf(precio)));
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return inventarioBodega;
     }

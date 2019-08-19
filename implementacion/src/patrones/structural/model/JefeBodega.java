@@ -58,4 +58,8 @@ public class JefeBodega extends UsuarioDecorator implements MetodosJefeGerente
     public void peticionRe(Bodega b) {
 
     }
+
+    public String getNombre() {
+        return nombre;
+    }
 }
