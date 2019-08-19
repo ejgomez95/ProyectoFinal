@@ -1,18 +1,23 @@
 package patrones.structural.model;
 
 import patrones.sinPatron.model.Articulo;
+import java.util.ArrayList ;
+import patrones.structural.model.TipoDeUsuario;
+import patrones.structural.model.Usuario;
 
-public class Gerente extends UsuarioDecorator {
-    private String nombre;
-    private String clave;
+public class Gerente implements UsuarioDecorador {
+    protected String usuario;
+    protected String clave;
 
-    public Gerente(String nombre, String clave) {
-        this.nombre = nombre;
-        this.clave = clave;
+    public Gerente(TipoDeUsuario usuarioDecorado) {
+        super(usuarioDecorado);
     }
 
-    public void almacenarDatos() {
-        super.almacenarDatos();
+    @Override
+    public void almacenarDatos(Usuario u) {
+        this.usuario= u.getUsuario();
+        this.clave= u.getClave();
+        asignarFuncionesDeAdministrador();
     }
 
     public Articulo buscarArticulo() {
@@ -25,5 +30,6 @@ public class Gerente extends UsuarioDecorator {
 
     public void asignarFuncionesDeAdministrador(){
         //TODO: Implementar
+        //Funciones CRUD
     }
 }

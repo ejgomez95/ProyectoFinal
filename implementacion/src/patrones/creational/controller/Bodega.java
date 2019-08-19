@@ -5,7 +5,8 @@ import patrones.creational.BaseDatos;
 
 import java.util.List;
 import java.util.Scanner;
-import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Bodega implements Locales {
     private List<Articulo> inventarioBodega;
@@ -65,3 +66,4 @@ public class Bodega implements Locales {
         return null;
     }
 }
+

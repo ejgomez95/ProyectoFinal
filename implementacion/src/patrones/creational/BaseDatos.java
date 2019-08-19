@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class BaseDatos {
     //TODO: Aquí conexión con base de datos SQL
     private static Connection conn = null;
-    private BaseDatos(){
+    private BaseDatos() throws SQLException{
         try {
             if( conn == null ){
                 String driver="com.mysql.jdbc.Driver"; //el driver varia segun la DB que usemos
@@ -23,7 +23,7 @@ public class BaseDatos {
         }
     }
 
-    public static Connection getConnection(){
+    public static Connection getConnection() throws SQLException{
         if (conn == null){
             new BaseDatos();
         }

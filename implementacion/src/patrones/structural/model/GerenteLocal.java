@@ -4,8 +4,13 @@ import patrones.creational.controller.Bodega;
 import patrones.sinPatron.model.Articulo;
 
 public class GerenteLocal extends UsuarioDecorator implements MetodosJefeGerente{
-    private String nombre;
-    private String clave;
+    protected String id;
+    protected String Nombre;
+    protected String Apellido;
+    protected String cargo;
+    protected float sueldo;
+    protected String usuario;
+    protected String clave;
 
     public GerenteLocal(String nombre, String clave) {
         this.nombre = nombre;

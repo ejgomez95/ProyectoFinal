@@ -7,11 +7,16 @@ import patrones.sinPatron.model.Ruta;
 
 public class JefeBodega extends UsuarioDecorator implements MetodosJefeGerente
 {
-    protected String nombre;
+    protected String id;
+    protected String Nombre;
+    protected String Apellido;
+    protected String cargo;
+    protected float sueldo;
+    protected String usuario;
     protected String clave;
 
     public void almacenarDatos() {
-        super.almacenarDatos();
+
     }
 
     public Articulo buscarArticulo() {

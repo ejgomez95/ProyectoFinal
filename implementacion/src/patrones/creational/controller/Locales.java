@@ -3,6 +3,7 @@ package patrones.creational.controller;
 import patrones.sinPatron.model.Articulo;
 
 import java.util.List;
+import java.sql.*;
 
 public interface Locales {
     List<Articulo> crearInventario();

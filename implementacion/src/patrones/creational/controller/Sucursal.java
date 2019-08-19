@@ -9,6 +9,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 public class Sucursal implements Locales{
     private List<Articulo> inventarioSucursal;
@@ -30,6 +33,7 @@ public class Sucursal implements Locales{
             }
         } catch (SQLException e) {
             e.printStackTrace();
+>>>>>>> 2482f2f10675a0bbf22b5366e7fb8e1f50d49ab7
         }
         return inventarioSucursal;
     }
