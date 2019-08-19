@@ -1,18 +1,18 @@
 package patrones.structural.model;
 
 import patrones.sinPatron.model.Articulo;
+import java.util.ArrayList ;
 
-public class UsuarioDecorator implements TipoDeUsuario{
-    protected String nombre;
-    protected String clave;
+public abstract class UsuarioDecorator implements TipoDeUsuario{
+    private TipoDeUsuario usuarioDecorado;
 
-    public void decorator(Usuario u){
-        //TODO: Implementar
+    public UsuarioDecorator(TipoDeUsuario usuarioDecorado) {
+        this.usuarioDecorado = usuarioDecorado;
     }
 
     @Override
     public void almacenarDatos() {
-
+        this.usuarioDecorado.almacenarDatos();
     }
 
     @Override
@@ -24,4 +24,5 @@ public class UsuarioDecorator implements TipoDeUsuario{
     public void seleccionarArticulo(Articulo a) {
 
     }
+
 }
