@@ -9,7 +9,7 @@ public class BaseDatos {
     private static Connection conn = null;
     private BaseDatos() throws SQLException{
         try {
-            if(conn == null ){
+            if( conn == null ){
                 String driver="com.mysql.jdbc.Driver"; //el driver varia segun la DB que usemos
                 String url="jdbc:mysql://localhost:3306/tecnoimportsa";
                 String pwd="Mysqlworkbench1";
