@@ -29,19 +29,11 @@ public class Matriz implements Locales {
                 String descripcion = rs.getString("descripcion");
                 String categoria = rs.getString("categoria");
                 String precio = rs.getString("precio");
-<<<<<<< HEAD
                 inventarioMatriz.add(new Articulo(nombre, descripcion, categoria, Float.parseFloat(precio)));
             }
         } catch (SQLException ex) {
             Logger.getLogger(Matriz.class.getName()).log(Level.SEVERE, null, ex);
-=======
-                inventarioMatriz.add(new Articulo(nombre, descripcion, categoria, Float.valueOf(precio)));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
->>>>>>> 2482f2f10675a0bbf22b5366e7fb8e1f50d49ab7
-        }
-        return inventarioMatriz;
+}        return inventarioMatriz;
     }
 
     @Override

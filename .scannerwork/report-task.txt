@@ -1,6 +1,6 @@
-projectKey=prueba
+projectKey=p01Grupo01
 serverUrl=http://200.126.12.164
 serverVersion=6.7.6.38781
-dashboardUrl=http://200.126.12.164/dashboard/index/prueba
-ceTaskId=AWyyLRgALm5p6v1cuI2h
-ceTaskUrl=http://200.126.12.164/api/ce/task?id=AWyyLRgALm5p6v1cuI2h
+dashboardUrl=http://200.126.12.164/dashboard/index/p01Grupo01
+ceTaskId=AWy0nAmoLm5p6v1cuI2q
+ceTaskUrl=http://200.126.12.164/api/ce/task?id=AWy0nAmoLm5p6v1cuI2q

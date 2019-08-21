@@ -87,4 +87,4 @@ public class Repartidor {
         this.sexo = sexo;
     }
 
-    public List<Repartidor> almacenarDatos() {
+    public List<Repartidor> almacenarDatos() {}}
