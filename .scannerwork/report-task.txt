@@ -1,6 +1,6 @@
-projectKey=P01Grupo01
-serverUrl=http://localhost:9000
-serverVersion=7.9.1.27448
-dashboardUrl=http://localhost:9000/dashboard?id=P01Grupo01
-ceTaskId=AWyoDeofo8uoCqIyPCi9
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AWyoDeofo8uoCqIyPCi9
+projectKey=prueba
+serverUrl=http://200.126.12.164
+serverVersion=6.7.6.38781
+dashboardUrl=http://200.126.12.164/dashboard/index/prueba
+ceTaskId=AWyyLRgALm5p6v1cuI2h
+ceTaskUrl=http://200.126.12.164/api/ce/task?id=AWyyLRgALm5p6v1cuI2h
