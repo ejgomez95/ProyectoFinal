@@ -1,10 +1,18 @@
 package patrones.structural.model;
 
+import patrones.creational.BaseDatos;
 import patrones.sinPatron.model.Articulo;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import static patrones.creational.BaseDatos.getConnection;
 
 
-public class Usuario implements TipoUsuario{
+public class Usuario implements TipoDeUsuario{
     protected String id;
     protected String Nombre;
     protected String Apellido;
@@ -96,7 +104,7 @@ public class Usuario implements TipoUsuario{
         String sql = "select * from Empleado";
         List<Usuario> empleadoList = new ArrayList<>();
         try (
-                Connection c = BaseDatos.getConnection();
+                Connection c = getConnection();
                 Statement stmnt = c.createStatement();
                 ResultSet rs = stmnt.executeQuery(sql);
         ){
@@ -109,13 +117,19 @@ public class Usuario implements TipoUsuario{
                 String us = rs.getString("username");
                 String pass = rs.getString("password");
                 String se = rs.getString("sexo");
-                Usuario person = new Empleado(u, n, a, car, suel, us,pass,se);
+                Usuario person;
+                person = new Usuario(u, n, a, car, suel, us,pass,se);
                 empleadoList.add(person);
             }
         } catch (SQLException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
         return empleadoList;
+    }
+
+    @Override
+    public void seleccionarArticulo(Articulo a) {
+
     }
 
     @Override

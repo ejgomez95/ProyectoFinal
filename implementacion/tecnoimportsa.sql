@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS tecnoimportsa;
+
 create database tecnoimportsa;
 
 use tecnoimportsa;
@@ -341,6 +343,21 @@ create view InventarioSucursal as
 SELECT Nombre, descripcion,categoria,Stock FROM Inventario
 join Producto where Inventario.idProducto = Producto.idProducto and idTecnoimport=2;
 
+
+DROP USER IF EXISTS 'juandi'@'%';
+DROP USER IF EXISTS 'emilio'@'%';
+DROP USER IF EXISTS 'allison'@'%';
+DROP USER IF EXISTS 'cesar'@'%';
+
+CREATE USER 'emilio'@'%' IDENTIFIED BY 'gomez';
+CREATE USER 'allison'@'%' IDENTIFIED BY 'barrezueta';
+CREATE USER 'cesar'@'%' IDENTIFIED BY 'carlier';
+CREATE USER 'juandi'@'%' IDENTIFIED BY 'vallejo';
+
+ GRANT ALL PRIVILEGES ON tecnoimportsa.* TO 'juandi'@'%';
+ GRANT ALL PRIVILEGES ON tecnoimportsa.* TO 'emilio'@'%';
+ GRANT ALL PRIVILEGES ON tecnoimportsa.* TO 'gomez'@'%';
+ GRANT ALL PRIVILEGES ON tecnoimportsa.* TO 'barrezueta'@'%';
 
 
 

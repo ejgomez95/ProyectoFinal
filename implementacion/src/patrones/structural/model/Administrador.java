@@ -2,6 +2,8 @@ package patrones.structural.model;
 
 import patrones.sinPatron.model.Articulo;
 
+import java.util.List;
+
 public class Administrador extends UsuarioDecorator {
     protected String id;
     protected String Nombre;
@@ -11,12 +13,17 @@ public class Administrador extends UsuarioDecorator {
     protected String usuario;
     protected String clave;
 
-    public void almacenarDatos() {
-        super.almacenarDatos();
+    public Administrador(TipoDeUsuario usuarioDecorado) {
+        super(usuarioDecorado);
     }
 
-    public Articulo buscarArticulo() {
-        return super.buscarArticulo();
+    public List<Usuario> almacenarDatos() {
+        super.almacenarDatos();
+        return null;
+    }
+
+    public Articulo buscarArticulo(List<Articulo> la) {
+        return super.buscarArticulo(la);
     }
 
     public void seleccionarArticulo(Articulo a) {

@@ -1,11 +1,11 @@
 package patrones.structural.model;
 
+import patrones.creational.controller.Bodega;
 import patrones.sinPatron.model.Articulo;
-import java.util.ArrayList ;
-import patrones.structural.model.TipoDeUsuario;
-import patrones.structural.model.Usuario;
 
-public class Gerente implements UsuarioDecorador {
+import java.util.List;
+
+public class Gerente extends UsuarioDecorator implements MetodosJefeGerente{
     protected String usuario;
     protected String clave;
 
@@ -14,14 +14,14 @@ public class Gerente implements UsuarioDecorador {
     }
 
     @Override
-    public void almacenarDatos(Usuario u) {
-        this.usuario= u.getUsuario();
-        this.clave= u.getClave();
-        asignarFuncionesDeAdministrador();
+    public List<Usuario> almacenarDatos() {
+        return null;
     }
 
-    public Articulo buscarArticulo() {
-        return super.buscarArticulo();
+    @Override
+    public Articulo buscarArticulo(List<Articulo> la) {
+        Articulo articulo = super.buscarArticulo(la);
+        return (Articulo) la;
     }
 
     public void seleccionarArticulo(Articulo a) {
@@ -31,5 +31,25 @@ public class Gerente implements UsuarioDecorador {
     public void asignarFuncionesDeAdministrador(){
         //TODO: Implementar
         //Funciones CRUD
+    }
+
+    @Override
+    public void realizarVentasLocales() {
+
+    }
+
+    @Override
+    public void realizarVentasDomicilio() {
+
+    }
+
+    @Override
+    public void manejarInventario() {
+
+    }
+
+    @Override
+    public void peticionRe(Bodega b) {
+
     }
 }

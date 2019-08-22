@@ -11,15 +11,20 @@ public class BaseDatos {
         try {
             if( conn == null ){
                 String driver="com.mysql.jdbc.Driver"; //el driver varia segun la DB que usemos
-                String url="jdbc:mysql://localhost:3306/tecnoimportsa";
-                String pwd="Mysqlworkbench1";
-                String usr="root";
-                Class.forName(driver);
+                String pwd="carlier";
+                String usr="cesar";
+                String dbName ="tecnoimportsa";
+                String url="jdbc:mysql://172.17.0.2:3306/" + dbName;
+                Class.forName(driver).newInstance();
                 conn = DriverManager.getConnection(url,usr,pwd);
-                System.out.println("Conectionesfull");
+                System.out.println("Conexión exitosa");
             }
         } catch (ClassNotFoundException | SQLException ex) {
             ex.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
         }
     }
 

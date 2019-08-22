@@ -3,6 +3,8 @@ package patrones.structural.model;
 import patrones.creational.controller.Bodega;
 import patrones.sinPatron.model.Articulo;
 
+import java.util.List;
+
 public class GerenteLocal extends UsuarioDecorator implements MetodosJefeGerente{
     protected String id;
     protected String Nombre;
@@ -12,17 +14,18 @@ public class GerenteLocal extends UsuarioDecorator implements MetodosJefeGerente
     protected String usuario;
     protected String clave;
 
-    public GerenteLocal(String nombre, String clave) {
-        this.nombre = nombre;
-        this.clave = clave;
+    public GerenteLocal(TipoDeUsuario usuarioDecorado) {
+        super(usuarioDecorado);
     }
 
-    public void almacenarDatos() {
+
+    public List<Usuario> almacenarDatos() {
         super.almacenarDatos();
+        return null;
     }
 
-    public Articulo buscarArticulo() {
-        return super.buscarArticulo();
+    public Articulo buscarArticulo(List<Articulo> la) {
+        return super.buscarArticulo(la);
     }
 
     public void seleccionarArticulo(Articulo a) {

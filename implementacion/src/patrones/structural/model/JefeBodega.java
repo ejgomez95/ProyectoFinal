@@ -5,6 +5,8 @@ import patrones.creational.controller.Bodega;
 import patrones.sinPatron.model.Articulo;
 import patrones.sinPatron.model.Ruta;
 
+import java.util.List;
+
 public class JefeBodega extends UsuarioDecorator implements MetodosJefeGerente
 {
     protected String id;
@@ -15,12 +17,17 @@ public class JefeBodega extends UsuarioDecorator implements MetodosJefeGerente
     protected String usuario;
     protected String clave;
 
-    public void almacenarDatos() {
-
+    public JefeBodega(TipoDeUsuario usuarioDecorado) {
+        super(usuarioDecorado);
     }
 
-    public Articulo buscarArticulo() {
-        return super.buscarArticulo();
+    public List<Usuario> almacenarDatos() {
+
+        return null;
+    }
+
+    public Articulo buscarArticulo(List<Articulo> la) {
+        return super.buscarArticulo(la);
     }
 
     public void seleccionarArticulo(Articulo a) {
@@ -65,6 +72,6 @@ public class JefeBodega extends UsuarioDecorator implements MetodosJefeGerente
     }
 
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
 }

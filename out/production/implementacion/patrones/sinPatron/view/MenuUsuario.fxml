@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="patrones.sinPatron.view.MenuUsuario">
+   <children>
+      <Label fx:id="labelMenu" layoutX="14.0" layoutY="14.0" text="Menu">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="botonVentas" layoutX="14.0" layoutY="61.0" mnemonicParsing="false" onAction="#lanzarMenuVentas" text="Ventas" />
+      <Button fx:id="botonEntregas" layoutX="14.0" layoutY="105.0" mnemonicParsing="false" onAction="#lanzarMenuEntregas" text="Entregas" />
+      <Button fx:id="botonLocal" layoutX="13.0" layoutY="150.0" mnemonicParsing="false" onAction="#lanzarMenuLocal" text="Local" />
+      <Button fx:id="botonEmpresa" layoutX="14.0" layoutY="188.0" mnemonicParsing="false" onAction="#lanzarMenuEmpresa" text="Empresa" />
+      <Button fx:id="botonSalir" layoutX="154.0" layoutY="230.0" mnemonicParsing="false" onAction="#salirSistema" text="Salir" />
+   </children>
+</AnchorPane>

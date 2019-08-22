@@ -1,5 +1,4 @@
-
-
+import java.util.List;
 
 public class Repartidor {
     protected String id;
@@ -87,4 +86,4 @@ public class Repartidor {
         this.sexo = sexo;
     }
 
-    public List<Repartidor> almacenarDatos() {}}
+    public List<Repartidor> almacenarDatos() {return null;}}
