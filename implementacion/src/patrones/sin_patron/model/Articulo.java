@@ -13,6 +13,7 @@ public class Articulo {
         this.descripcion = descripcion;
         this.categoria = categoria;
         this.precio = precio;
+        venta = new Venta(null,null,false);
     }
 
     public String getNombre() {

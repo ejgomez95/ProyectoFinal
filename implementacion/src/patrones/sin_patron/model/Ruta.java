@@ -12,4 +12,17 @@ public class Ruta {
     public List<Envio> getEnvios() {
         return envios;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Ruta: {");
+        for(Envio e: envios){
+            sb.append(e + " ");
+        }
+        sb.append("}");
+        return sb.toString();
+    }
+    
+    
 }

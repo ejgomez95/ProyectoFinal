@@ -1,6 +1,6 @@
 package patrones.behavioral.controller;
 
-import patrones.sin_patron.model.Repartidor;
+import patrones.structural.model.Repartidor;
 
 import java.util.Queue;
 

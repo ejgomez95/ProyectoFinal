@@ -68,6 +68,13 @@ public class Bodega implements Locales {
         return null;
     }
 
+    public List<Articulo> getInventarioBodega() {
+        return inventarioBodega;
+    }
+
+    public void setInventarioBodega(List<Articulo> inventarioBodega) {
+        this.inventarioBodega = inventarioBodega;
+    }
 
 }
 
