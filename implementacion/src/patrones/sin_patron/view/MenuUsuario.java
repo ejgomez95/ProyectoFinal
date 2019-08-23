@@ -1,6 +1,7 @@
 package patrones.sin_patron.view;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -12,12 +13,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MenuUsuario {
-    public Label labelMenu;
-    public Button botonVentas;
-    public Button botonLocal;
-    public Button botonEntregas;
-    public Button botonEmpresa;
-    public Button botonSalir;
+    @FXML private Label labelMenu;
+    @FXML private Button botonVentas;
+    @FXML private Button botonLocal;
+    @FXML private Button botonEntregas;
+    @FXML private Button botonEmpresa;
+    @FXML private Button botonSalir;
 
     public void consultarUsuarios(){
         //Aún no implementado

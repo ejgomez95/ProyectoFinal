@@ -1,6 +1,7 @@
 package patrones.sin_patron.view;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -14,8 +15,8 @@ import java.io.IOException;
 
 public class MenuLocal {
 
-    public Button botonRegresar;
-    public Label labelLocal;
+    @FXML private Button botonRegresar;
+    @FXML private Label labelLocal;
 
     public Articulo buscarArticuloPorNombre(){
         return null;

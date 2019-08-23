@@ -1,6 +1,7 @@
 package patrones.sin_patron.view;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -12,8 +13,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MenuEmpresa {
-    public Button botonRegresar;
-    public Label labelEmpresa;
+    @FXML private Button botonRegresar;
+    @FXML private Label labelEmpresa;
 
     public void seleccionarLocal(){
         //Aún no implementado

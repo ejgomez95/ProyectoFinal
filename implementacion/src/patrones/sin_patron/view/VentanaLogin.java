@@ -1,6 +1,7 @@
 package patrones.sin_patron.view;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -14,12 +15,13 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class VentanaLogin {
-    public Button botonSalir;
-    public Button botonIngresar;
-    public PasswordField campoContrasena;
-    public TextField campoUsuario;
-    public Label labelNombreEmpresa;
-    public Label labelAdvertencia;
+
+    @FXML private Button botonSalir;
+    @FXML private Button botonIngresar;
+    @FXML private PasswordField campoContrasena;
+    @FXML private TextField campoUsuario;
+    @FXML private Label labelNombreEmpresa;
+    @FXML private Label labelAdvertencia;
 
     public void ingresar(ActionEvent actionEvent) throws IOException {
         //Codigo de lanzamiento para la ventana del menuUsuario
