@@ -8,4 +8,6 @@ public interface TipoDeUsuario {
     List<Usuario> almacenarDatos();
     Articulo buscarArticulo(List<Articulo> la);
     void seleccionarArticulo(Articulo a);
+
+
 }

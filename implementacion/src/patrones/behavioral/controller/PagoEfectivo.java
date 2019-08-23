@@ -20,4 +20,6 @@ public class PagoEfectivo implements TipoPago {
     public void setDescuento(float descuento) {
         this.descuento = descuento;
     }
+
+
 }

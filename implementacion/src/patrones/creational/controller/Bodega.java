@@ -67,5 +67,7 @@ public class Bodega implements Locales {
         System.out.println("No se encontro articulo con ese nombre");
         return null;
     }
+
+
 }
 

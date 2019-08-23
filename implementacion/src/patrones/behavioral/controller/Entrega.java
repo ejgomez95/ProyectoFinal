@@ -13,4 +13,6 @@ public class Entrega {
     public void hacerEntrega(){
         System.out.println("Entrega de articulo: " + articulo.getNombre() + "se realizara: " + tipoEntrega);
     }
+
+
 }
