@@ -1,6 +1,6 @@
 package patrones.behavioral.controller;
 
-import patrones.sinPatron.model.Articulo;
+import patrones.sin_patron.model.Articulo;
 
 public class EntregaLocal implements TipoEntrega{
     @Override

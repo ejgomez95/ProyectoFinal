@@ -2,16 +2,17 @@ package patrones.structural.model;
 
 import patrones.behavioral.controller.ColaRep;
 import patrones.creational.controller.Bodega;
-import patrones.sinPatron.model.Articulo;
-import patrones.sinPatron.model.Ruta;
+import patrones.sin_patron.model.Articulo;
+import patrones.sin_patron.model.Ruta;
 
+import java.util.Collections;
 import java.util.List;
 
 public class JefeBodega extends UsuarioDecorator implements MetodosJefeGerente
 {
     protected String id;
-    protected String Nombre;
-    protected String Apellido;
+    protected String nombre;
+    protected String apellido;
     protected String cargo;
     protected float sueldo;
     protected String usuario;
@@ -23,55 +24,57 @@ public class JefeBodega extends UsuarioDecorator implements MetodosJefeGerente
 
     public List<Usuario> almacenarDatos() {
 
-        return null;
+        return Collections.emptyList();
     }
 
+    @Override
     public Articulo buscarArticulo(List<Articulo> la) {
         return super.buscarArticulo(la);
     }
 
+    @Override
     public void seleccionarArticulo(Articulo a) {
         super.seleccionarArticulo(a);
     }
 
     public void asignarRuta(ColaRep cola){
-        //TODO: Implementar
+        //Aún no implementado
     }
 
     public void crearRuta(Ruta r){
-        //TODO: Implementar
+        //Aún no implementado
     }
 
     public void ingresarNovedades(){
-        //TODO: Implementar
+        //Aún no implementado
     }
 
     public boolean repDisponible(ColaRep cola){
-        //TODO: Implementar
+        //Aún no implementado
         return false;
     }
 
     @Override
     public void realizarVentasLocales() {
-
+        //Aún no implementado
     }
 
     @Override
     public void realizarVentasDomicilio() {
-
+        //Aún no implementado
     }
 
     @Override
     public void manejarInventario() {
-
+        //Aún no implementado
     }
 
     @Override
     public void peticionRe(Bodega b) {
-
+        //Aún no implementado
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 }

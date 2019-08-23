@@ -1,4 +1,4 @@
-package patrones.sinPatron.view;
+package patrones.sin_patron.view;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -8,26 +8,29 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import patrones.sin_patron.model.Articulo;
 
 import java.io.IOException;
 
-public class MenuVentas {
-    public Button botonPagos;
-    public Button botonVentas;
+public class MenuLocal {
+
     public Button botonRegresar;
-    public Label labelVentas;
+    public Label labelLocal;
 
-    public void ingresarPago(){
-        //TODO: Implementar
-        //TODO: Referir a clase Pago
+    public Articulo buscarArticuloPorNombre(){
+        return null;
     }
 
-    public void consultarVentas(){
-        //TODO: Implementar
-        //TODO: Referir a clase Venta y clase Entrega
+    public Articulo buscarArticuloPorDescripcion(){
+        return null;
     }
 
-    public void lanzarVentanaPagos(ActionEvent actionEvent) {
+    public Articulo buscarArticuloPorCategoria(){
+        return null;
+    }
+
+    public void consultarArticulos(){
+        //Aún no implementado
     }
 
     public void regresar(ActionEvent actionEvent) throws IOException {
@@ -36,5 +39,13 @@ public class MenuVentas {
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(dashboardScene);
         window.show();
+    }
+
+    public Button getBotonRegresar() {
+        return botonRegresar;
+    }
+
+    public Label getLabelLocal() {
+        return labelLocal;
     }
 }

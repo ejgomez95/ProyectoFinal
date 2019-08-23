@@ -1,4 +1,4 @@
-package patrones.sinPatron.model;
+package patrones.sin_patron.model;
 
 import patrones.structural.model.JefeBodega;
 

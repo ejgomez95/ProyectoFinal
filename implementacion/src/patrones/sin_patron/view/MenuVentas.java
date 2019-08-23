@@ -1,4 +1,4 @@
-package patrones.sinPatron.view;
+package patrones.sin_patron.view;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -11,12 +11,22 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MenuEntrega {
+public class MenuVentas {
+    public Button botonPagos;
+    public Button botonVentas;
     public Button botonRegresar;
-    public Label labelEntrega;
+    public Label labelVentas;
 
-    public void consultarEntregas(){
-        //TODO: Implementar
+    public void ingresarPago(){
+        //Aún no implementado
+    }
+
+    public void consultarVentas(){
+        //Aún no implementado
+    }
+
+    public void lanzarVentanaPagos(ActionEvent actionEvent) {
+        //Aún no implementado
     }
 
     public void regresar(ActionEvent actionEvent) throws IOException {
@@ -25,5 +35,21 @@ public class MenuEntrega {
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(dashboardScene);
         window.show();
+    }
+
+    public Button getBotonPagos() {
+        return botonPagos;
+    }
+
+    public Button getBotonVentas() {
+        return botonVentas;
+    }
+
+    public Button getBotonRegresar() {
+        return botonRegresar;
+    }
+
+    public Label getLabelVentas() {
+        return labelVentas;
     }
 }

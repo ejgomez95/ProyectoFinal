@@ -1,7 +1,8 @@
 package patrones.structural.model;
 
-import patrones.sinPatron.model.Articulo;
+import patrones.sin_patron.model.Articulo;
 
+import java.util.Collections;
 import java.util.List;
 
 public abstract class UsuarioDecorator implements TipoDeUsuario{
@@ -14,7 +15,7 @@ public abstract class UsuarioDecorator implements TipoDeUsuario{
     @Override
     public List<Usuario> almacenarDatos() {
         this.usuarioDecorado.almacenarDatos();
-        return null;
+        return Collections.emptyList();
     }
 
     public Articulo buscarArticulo(List<Articulo> la) {
@@ -23,7 +24,7 @@ public abstract class UsuarioDecorator implements TipoDeUsuario{
 
     @Override
     public void seleccionarArticulo(Articulo a) {
-
+        //Aún no implementado
     }
 
 }

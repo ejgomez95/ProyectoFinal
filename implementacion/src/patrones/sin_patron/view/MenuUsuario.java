@@ -1,4 +1,4 @@
-package patrones.sinPatron.view;
+package patrones.sin_patron.view;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -20,9 +20,7 @@ public class MenuUsuario {
     public Button botonSalir;
 
     public void consultarUsuarios(){
-        //TODO: Implementar
-        //TODO: Referir a clases: MenuEmpresa, MenuVentas, MenuEntrega
-        //TODO: Referir a interfaz TipoDeUsuario
+        //Aún no implementado
     }
 
     public void lanzarMenuVentas(ActionEvent actionEvent) throws IOException {
@@ -58,5 +56,30 @@ public class MenuUsuario {
     }
 
     public void salirSistema(ActionEvent actionEvent) {
+        //Aún no implementado.
+    }
+
+    public Label getLabelMenu() {
+        return labelMenu;
+    }
+
+    public Button getBotonVentas() {
+        return botonVentas;
+    }
+
+    public Button getBotonLocal() {
+        return botonLocal;
+    }
+
+    public Button getBotonEntregas() {
+        return botonEntregas;
+    }
+
+    public Button getBotonEmpresa() {
+        return botonEmpresa;
+    }
+
+    public Button getBotonSalir() {
+        return botonSalir;
     }
 }

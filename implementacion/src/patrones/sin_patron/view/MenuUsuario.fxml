@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="patrones.sinPatron.view.MenuUsuario">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="patrones.sin_patron.view.MenuUsuario">
    <children>
       <Label fx:id="labelMenu" layoutX="14.0" layoutY="14.0" text="Menu">
          <font>

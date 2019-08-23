@@ -1,9 +1,12 @@
+package patrones.structural.model;
+
+import java.util.Collections;
 import java.util.List;
 
 public class Repartidor {
     protected String id;
-    protected String Nombre;
-    protected String Apellido;
+    protected String nombre;
+    protected String apellido;
     protected String cargo;
     protected float sueldo;
     protected String usuario;
@@ -11,14 +14,10 @@ public class Repartidor {
     protected String sexo;
 
 
-    public Repartidor(String id, String nombre, String apellido, String cargo, float sueldo, String usuario, String clave,String sexo){
+    public Repartidor(String id, String nombre, String apellido, String sexo){
         this.id = id;
-        this.Nombre = nombre;
-        this.Apellido=apellido;
-        this.cargo=cargo;
-        this.sueldo=sueldo;
-        this.usuario=usuario;
-        this.clave=clave;
+        this.nombre = nombre;
+        this.apellido =apellido;
         this.sexo=sexo;
     }
 
@@ -31,19 +30,19 @@ public class Repartidor {
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public void setNombre(String nombre) {
-        Nombre = nombre;
+        this.nombre = nombre;
     }
 
     public String getApellido() {
-        return Apellido;
+        return apellido;
     }
 
     public void setApellido(String apellido) {
-        Apellido = apellido;
+        this.apellido = apellido;
     }
 
     public String getCargo() {
@@ -86,4 +85,4 @@ public class Repartidor {
         this.sexo = sexo;
     }
 
-    public List<Repartidor> almacenarDatos() {return null;}}
+    public List<Repartidor> almacenarDatos() {return Collections.emptyList();}}

@@ -1,7 +1,6 @@
 package patrones.structural.model;
 
-import patrones.creational.BaseDatos;
-import patrones.sinPatron.model.Articulo;
+import patrones.sin_patron.model.Articulo;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +13,8 @@ import static patrones.creational.BaseDatos.getConnection;
 
 public class Usuario implements TipoDeUsuario{
     protected String id;
-    protected String Nombre;
-    protected String Apellido;
+    protected String nombre;
+    protected String apellido;
     protected String cargo;
     protected float sueldo;
     protected String usuario;
@@ -25,8 +24,8 @@ public class Usuario implements TipoDeUsuario{
 
     public Usuario(String id, String nombre, String apellido, String cargo, float sueldo, String usuario, String clave,String sexo){
         this.id = id;
-        this.Nombre = nombre;
-        this.Apellido=apellido;
+        this.nombre = nombre;
+        this.apellido =apellido;
         this.cargo=cargo;
         this.sueldo=sueldo;
         this.usuario=usuario;
@@ -43,19 +42,19 @@ public class Usuario implements TipoDeUsuario{
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public void setNombre(String nombre) {
-        Nombre = nombre;
+        this.nombre = nombre;
     }
 
     public String getApellido() {
-        return Apellido;
+        return apellido;
     }
 
     public void setApellido(String apellido) {
-        Apellido = apellido;
+        this.apellido = apellido;
     }
 
     public String getCargo() {

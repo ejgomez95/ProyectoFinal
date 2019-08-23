@@ -1,7 +1,7 @@
 package patrones.creational.controller;
 
 import patrones.creational.BaseDatos;
-import patrones.sinPatron.model.Articulo;
+import patrones.sin_patron.model.Articulo;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -9,7 +9,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 import java.util.Scanner;
-import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

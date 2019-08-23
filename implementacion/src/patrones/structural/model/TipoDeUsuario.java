@@ -1,6 +1,6 @@
 package patrones.structural.model;
 
-import patrones.sinPatron.model.Articulo;
+import patrones.sin_patron.model.Articulo;
 
 import java.util.List;
 

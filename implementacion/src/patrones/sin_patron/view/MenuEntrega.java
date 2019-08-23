@@ -1,4 +1,4 @@
-package patrones.sinPatron.view;
+package patrones.sin_patron.view;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -11,13 +11,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MenuEmpresa {
+public class MenuEntrega {
     public Button botonRegresar;
-    public Label labelEmpresa;
+    public Label labelEntrega;
 
-    public void seleccionarLocal(){
-        //TODO: Implementar
-        //TODO: Utilizar la interfaz Locales en implementación
+    public void consultarEntregas(){
+        //Aún no implementado
     }
 
     public void regresar(ActionEvent actionEvent) throws IOException {
@@ -26,5 +25,13 @@ public class MenuEmpresa {
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(dashboardScene);
         window.show();
+    }
+
+    public Button getBotonRegresar() {
+        return botonRegresar;
+    }
+
+    public Label getLabelEntrega() {
+        return labelEntrega;
     }
 }

@@ -1,6 +1,6 @@
 package patrones.creational.controller;
 
-import patrones.sinPatron.model.Articulo;
+import patrones.sin_patron.model.Articulo;
 import patrones.creational.BaseDatos;
 
 import java.sql.Connection;
@@ -9,8 +9,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class Bodega implements Locales {
     private List<Articulo> inventarioBodega;

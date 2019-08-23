@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="patrones.sinPatron.view.MenuLocal">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="patrones.sin_patron.view.MenuLocal">
    <children>
       <Button fx:id="botonRegresar" layoutX="104.0" layoutY="188.0" mnemonicParsing="false" onAction="#regresar" text="Regresar" />
       <Label fx:id="labelLocal" layoutX="90.0" layoutY="32.0" text="Local">

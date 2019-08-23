@@ -1,4 +1,4 @@
-package patrones.sinPatron.view;
+package patrones.sin_patron.view;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -7,22 +7,19 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class VentanaLogin {
-    public Button BotonSalir;
-    public Button BotonIngresar;
-    public PasswordField CampoContraseña;
-    public TextField CampoUsuario;
-    public Label labelNombreEmpresa;
-    public Label labelAdvertencia;
+public class MenuEmpresa {
+    public Button botonRegresar;
+    public Label labelEmpresa;
 
-    public void ingresar(ActionEvent actionEvent) throws IOException {
-        //Codigo de lanzamiento para la ventana del menuUsuario
+    public void seleccionarLocal(){
+        //Aún no implementado
+    }
+
+    public void regresar(ActionEvent actionEvent) throws IOException {
         Parent dashboardParent = FXMLLoader.load(getClass().getResource("MenuUsuario.fxml"));
         Scene dashboardScene = new Scene(dashboardParent);
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
@@ -30,6 +27,11 @@ public class VentanaLogin {
         window.show();
     }
 
-    public void cerrarSistema(ActionEvent actionEvent) {
+    public Button getBotonRegresar() {
+        return botonRegresar;
+    }
+
+    public Label getLabelEmpresa() {
+        return labelEmpresa;
     }
 }
