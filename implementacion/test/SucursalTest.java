@@ -6,13 +6,16 @@ class SucursalTest {
 
     @Test
     void crearInventario() {
+        throw new UnsupportedOperationException("No implementado");
     }
 
     @Test
     void venderLocal() {
+        throw new UnsupportedOperationException("No implementado");
     }
 
     @Test
     void venderDomicilio() {
+        throw new UnsupportedOperationException("No implementado");
     }
 }

@@ -23,12 +23,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="4704e622-3e44-4c79-b1c6-202475f1c9d4">
-        <schema name="information_schema" object-types="table, view" />
-        <schema name="tecnoimportsa" object-types="table, view" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="4704e622-3e44-4c79-b1c6-202475f1c9d4">

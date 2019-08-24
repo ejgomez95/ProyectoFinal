@@ -8,12 +8,12 @@ public class TipoDeUsuarioTest {
 
     @Test
     void almacenarDatos() {
-       
+        throw new UnsupportedOperationException("No implementado");
     }
 
     @Test
     void buscarArticulo() {
-        
+        throw new UnsupportedOperationException("No implementado");
     }
 
 }
